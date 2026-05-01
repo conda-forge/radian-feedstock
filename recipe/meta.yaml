@@ -15,18 +15,21 @@ build:
   noarch: python
   entry_points:
     - radian = radian:main
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
     - pip
     - pytest-runner
     - python {{ python_min }}
+    - setuptools >=61.0
+    - wheel
   run:
     - pygments >=2.5.0
     - python >={{ python_min }}
     - prompt_toolkit >=3.0.41,<3.1
-    - rchitect >=0.4.8,<0.5.0
+    - rchitect >=0.4.10,<0.5.0
+    - py-lief >=0.16  # [osx]
 
 test:
   imports:
