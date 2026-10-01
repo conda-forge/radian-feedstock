@@ -1,5 +1,5 @@
 {% set name = "radian" %}
-{% set version = "0.7.0" %}
+{% set version = "0.7.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/radian-{{ version }}.tar.gz
-  sha256: 55081f1021dd0987ae74af171c964e3b54602ab852a1b9e6fbe3aca56522101a
+  sha256: dfbd6a649aa7c2e3546ed83483193f95a89fa85351cafedcaeb13a0acfb1e728
 
 build:
   number: 0
@@ -27,7 +27,7 @@ requirements:
     - pygments >=2.5.0
     - python >={{ python_min }}
     - prompt_toolkit >=3.0.41,<3.1
-    - rchitect >=0.5.1,<0.6.0
+    - rchitect >=0.5.2,<0.6.0
 
 test:
   imports:
