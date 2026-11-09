@@ -32,10 +32,10 @@ requirements:
 test:
   imports:
     - radian
-    - radian.latex
   commands:
     - pip check
     - radian --help
+    - radian --version
   requires:
     - pip
     - python {{ python_min }}
